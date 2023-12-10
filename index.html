@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>simulador de ingresos y egresos</title>
+</head>
+<body>
+
+    <div class="container">
+        <header id="encabezado">
+        <h1 id="titulo">Presupuesto Disponible</h1>
+        <h1 id="balance">$23,000</h1>
+
+        <div id="totalIngresosEgresos">
+            <div id="ingresobloque">
+                <p>Ingresos: $<span id="totalIngresos">0</span></p>
+            </div>
+            <div id="egresobloque">
+                <p>Egresos: $<span id="totalEgresos">0</span></p>
+            </div>
+            
+        </div>
+        </header>
+
+        <div class="fila">
+            <div class="columna">
+                <select id="tipoOperacion">
+                    <option value="ingreso">+</option>
+                    <option value="egreso">-</option>
+                </select>
+            </div>
+
+            <div class="columna">
+                <input type="text" id="nombreActividad" placeholder="Descripci&oacute;n" required autofocus >
+            </div>
+
+            <div class="columna">
+                <input type="number" id="montoInput" placeholder="Valor">
+            </div>
+
+            <div class="columna">
+                <button onclick="registrarOperacion()"><img src="./marca-de-verificacion.png" alt="Confirmacion" width="35"></button>
+            </div>
+        </div>
+
+        <div class="columnas">
+            <div class="columna">
+                <h2>Ingresos</h2>
+                <ul id="registroIngresos"></ul>
+            </div>
+            <div class="columna">
+                <h2>Egresos</h2>
+                <ul id="registroEgresos"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
